@@ -13,7 +13,7 @@ The competition used **Regularized Weighted MAPE (rWMAPE)**.
 We utilized **AutoGluon TimeSeries** as the core engine.
 *   **Preset:** `high_quality` (Ensembles DeepAR, TiDE, PatchTST, and Gradient Boosting).
 *   **Training Data:** We "densified" the sparse transaction data.
-    *   **Interpolation:** Used linear interpolation to fill gaps during training. This smoothed the variance and helped Tree/DL models learn trends better than zero-filling, minimizing the Volume Penalty.
+    *   **Interpolation:** Used linear interpolation to fill gaps in intermediate months. This smoothed the variance and helped Tree/DL models learn trends better than zero-filling, minimizing the Volume Penalty.
 *   **Features:** Engineered lifecycle features derived from `product_master` (e.g., `months_since_start_production`, `months_since_end_production`).
 
 ### 2. Forecast Aggregation (Consistency)
